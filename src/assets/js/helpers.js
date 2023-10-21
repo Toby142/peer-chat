@@ -106,26 +106,22 @@ export default {
         }
     },
 
-
     getIceServer() {
-        let xirsysUsername = "onsLucerd";
-        let xirsysCredential = "d3e0477c-7004-11ee-a00a-0242ac130003";
-        let xirsysChannel = "MyFirstApp";
-
         return {
-            iceServers: [
-                {
-                    urls: ["stun:global.xirsys.net"]
-                },
-                {
-                    username: xirsysUsername + ":" + xirsysChannel,
-                    credential: xirsysCredential,
-                    urls: [
-                        "turn:global.xirsys.net:80?transport=udp",
-                        "turn:global.xirsys.net:3478?transport=tcp"
-                    ]
-                }
-            ]
+            iceServers: [{
+                urls: [ "stun:fr-turn1.xirsys.com" ]
+             }, {
+                username: "Cb7v1d9Appmghyrame5Y_kwVqJ3OD6U3J1WH96RL0ZxQsesEYglvID6zqh8DEaAUAAAAAGUzuddvbnNMdWNlcmQ=",
+                credential: "54280a76-7007-11ee-8069-0242ac120004",
+                urls: [
+                    "turn:fr-turn1.xirsys.com:80?transport=udp",
+                    "turn:fr-turn1.xirsys.com:3478?transport=udp",
+                    "turn:fr-turn1.xirsys.com:80?transport=tcp",
+                    "turn:fr-turn1.xirsys.com:3478?transport=tcp",
+                    "turns:fr-turn1.xirsys.com:443?transport=tcp",
+                    "turns:fr-turn1.xirsys.com:5349?transport=tcp"
+                ]
+             }]
         };
     },
 
