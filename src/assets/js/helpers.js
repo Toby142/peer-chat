@@ -108,17 +108,21 @@ export default {
 
 
     getIceServer() {
+        let xirsysUsername = "onsLucerd";
+        let xirsysCredential = "d3e0477c-7004-11ee-a00a-0242ac130003";
+        let xirsysChannel = "MyFirstApp";
+
         return {
             iceServers: [
                 {
-                    urls: ["stun:eu-turn4.xirsys.com"]
+                    urls: ["stun:global.xirsys.net"]
                 },
                 {
-                    username: "ml0jh0qMKZKd9P_9C0UIBY2G0nSQMCFBUXGlk6IXDJf8G2uiCymg9WwbEJTMwVeiAAAAAF2__hNSaW5vbGVl",
-                    credential: "4dd454a6-feee-11e9-b185-6adcafebbb45",
+                    username: xirsysUsername + ":" + xirsysChannel,
+                    credential: xirsysCredential,
                     urls: [
-                        "turn:eu-turn4.xirsys.com:80?transport=udp",
-                        "turn:eu-turn4.xirsys.com:3478?transport=tcp"
+                        "turn:global.xirsys.net:80?transport=udp",
+                        "turn:global.xirsys.net:3478?transport=tcp"
                     ]
                 }
             ]
